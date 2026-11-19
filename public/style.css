@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+:root {
+  color-scheme: light;
+  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: #1c1e21;
+  background: #f0f2f5;
+}
+
+* { box-sizing: border-box; }
+body { margin: 0; min-height: 100vh; }
+button { font: inherit; }
+.page {
+  min-height: 100vh;
+  width: min(100% - 32px, 1000px);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(320px, 410px);
+  align-items: center;
+  gap: clamp(36px, 7vw, 90px);
+  padding: 56px 0;
+}
+.intro { max-width: 480px; }
+.brand-mark {
+  width: 54px;
+  height: 54px;
+  display: grid;
+  place-items: center;
+  border-radius: 16px;
+  background: #1877f2;
+  color: white;
+  font-family: Arial, sans-serif;
+  font-size: 43px;
+  line-height: 1;
+  font-weight: 700;
+  margin-bottom: 30px;
+  box-shadow: 0 8px 22px rgba(24, 119, 242, .2);
+}
+.eyebrow { color: #68717d; font-size: 11px; font-weight: 800; letter-spacing: .13em; margin: 0 0 14px; }
+h1 { font-size: clamp(34px, 5vw, 54px); letter-spacing: -.045em; line-height: 1.08; margin: 0 0 18px; }
+.intro-copy { color: #606770; font-size: 18px; line-height: 1.65; max-width: 420px; margin: 0; }
+.panel {
+  background: #fff;
+  border: 1px solid rgba(0, 0, 0, .04);
+  border-radius: 18px;
+  padding: 30px;
+  box-shadow: 0 12px 38px rgba(25, 39, 52, .09);
+}
+h2 { font-size: 23px; letter-spacing: -.025em; margin: 0 0 8px; }
+.panel-copy { color: #606770; font-size: 14px; line-height: 1.6; margin: 0 0 22px; }
+.facebook-button, .secondary-button {
+  width: 100%; min-height: 52px; border: 0; border-radius: 9px;
+  display: flex; justify-content: center; align-items: center; gap: 12px;
+  cursor: pointer; font-weight: 700; transition: background .15s ease, transform .15s ease;
+}
+.facebook-button { background: #1877f2; color: #fff; }
+.facebook-button:hover:not(:disabled) { background: #166fe5; }
+.facebook-button:active:not(:disabled), .secondary-button:active { transform: scale(.99); }
+.facebook-button:disabled { opacity: .58; cursor: not-allowed; }
+.button-f { font: 700 25px Arial, sans-serif; line-height: 1; }
+.status { min-height: 19px; color: #68717d; font-size: 12px; line-height: 1.5; text-align: center; margin: 13px 0 0; }
+.status.error { color: #b42318; }
+.security-note { display: flex; align-items: flex-start; gap: 10px; padding: 14px; margin-top: 22px; border-radius: 10px; background: #f5f8fc; }
+.lock { font-size: 16px; line-height: 1.4; }
+.security-note p { color: #59636f; font-size: 11px; line-height: 1.6; margin: 0; }
+.security-note strong { color: #263445; }
+.disclaimer { color: #8a929c; font-size: 10px; line-height: 1.5; text-align: center; margin: 22px 0 0; }
+footer { position: fixed; bottom: 18px; left: 0; right: 0; color: #8a929c; font-size: 11px; text-align: center; pointer-events: none; }
+.success-mark { width: 44px; height: 44px; border-radius: 50%; background: #e8f7ee; color: #16834a; display: grid; place-items: center; font-size: 24px; font-weight: 800; margin-bottom: 16px; }
+.profile { display: flex; align-items: center; gap: 12px; background: #f5f7fa; padding: 13px; border-radius: 10px; margin: 20px 0; }
+.profile img, .profile-fallback { width: 46px; height: 46px; border-radius: 50%; object-fit: cover; }
+.profile-fallback { background: #dce8fb; color: #1877f2; display: grid; place-items: center; font-weight: 800; }
+.profile-details { display: flex; flex-direction: column; gap: 4px; min-width: 0; }
+.profile-details strong { font-size: 14px; overflow-wrap: anywhere; }
+.profile-details span { color: #68717d; font-size: 12px; overflow-wrap: anywhere; }
+.secondary-button { color: #263445; background: #edf0f4; }
+.secondary-button:hover { background: #e2e7ed; }
+[hidden] { display: none !important; }
+
+@media (max-width: 760px) {
+  .page { grid-template-columns: 1fr; justify-items: center; gap: 28px; padding: 42px 0 72px; }
+  .intro { text-align: center; }
+  .brand-mark { margin: 0 auto 22px; }
+  .intro-copy { font-size: 15px; }
+  .panel { width: min(100%, 410px); padding: 24px; }
+  footer { position: static; padding: 0 0 18px; margin-top: -52px; }
+}

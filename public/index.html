@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f0f2f5">
+  <title>Connect with Facebook</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <main class="page">
+    <section class="intro" aria-labelledby="page-title">
+      <div class="brand-mark" aria-hidden="true">f</div>
+      <p class="eyebrow">THIRD-PARTY APP SIGN-IN</p>
+      <h1 id="page-title">Connect your account</h1>
+      <p class="intro-copy">Use Facebook Login to securely connect your account to this app.</p>
+    </section>
+
+    <section class="panel" aria-label="Facebook sign-in">
+      <div id="signed-out-view">
+        <h2>Welcome</h2>
+        <p class="panel-copy">Continue with Facebook to sign in.</p>
+        <button id="login-button" class="facebook-button" type="button" disabled>
+          <span class="button-f" aria-hidden="true">f</span>
+          <span>Continue with Facebook</span>
+        </button>
+        <p id="status" class="status" role="status" aria-live="polite">Preparing secure sign-in…</p>
+        <div class="security-note">
+          <span class="lock" aria-hidden="true">🔒</span>
+          <p><strong>Your password and OTP stay with Facebook.</strong> Facebook handles sign-in and any two-factor verification in its secure dialog. This app never asks you to type or share your Facebook password or one-time code here.</p>
+        </div>
+      </div>
+
+      <div id="signed-in-view" hidden>
+        <div class="success-mark" aria-hidden="true">✓</div>
+        <h2>You’re connected</h2>
+        <div class="profile">
+          <img id="profile-picture" alt="" hidden>
+          <div class="profile-fallback" id="profile-fallback" aria-hidden="true">F</div>
+          <div class="profile-details">
+            <strong id="profile-name"></strong>
+            <span id="profile-email"></span>
+          </div>
+        </div>
+        <p class="panel-copy">You are signed in to this app. Your Facebook password and OTP were not shared with it.</p>
+        <button id="logout-button" class="secondary-button" type="button">Sign out of this app</button>
+        <p id="signed-in-status" class="status" role="status" aria-live="polite"></p>
+      </div>
+
+      <p class="disclaimer">This is a third-party sign-in page, not the Facebook website. Facebook Login is provided by Meta.</p>
+    </section>
+    <footer>Secure account connection</footer>
+  </main>
+  <script src="./app.js" defer></script>
+</body>
+</html>
